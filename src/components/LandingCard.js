@@ -1,6 +1,5 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
 import Foto from '../media/images/foto.jpg'
@@ -12,9 +11,22 @@ import database from '../media/svg/database.svg'
 import java from '../media/svg/java.svg'
 import material from '../media/svg/material.svg'
 import react from '../media/svg/react.svg'
+import fadein from 'react-animations/lib/fade-in'
+import styled, { keyframes } from 'styled-components'
+
+
+let anim;
+let ZomDiv;
+
+
+anim = keyframes`${fadein}`; 
+ZomDiv = styled.div`
+  animation: 1s ${anim};
+`;
 
 const LandingCard = () => {
     return (
+        <ZomDiv>
         <Card style={styles.Card}>
             <div style={styles.imgContainer}>
                 <CardMedia style={styles.img}
@@ -23,8 +35,9 @@ const LandingCard = () => {
             </div>
             <div style={styles.text}>
                 <Typography style={styles.text}>{typoContent.firstLine} <br /> {typoContent.secondLine}<br/>
-                <a href='https://linkedin.com/in/joel-albornoz/' target='_blank'>Linkedin</a> <br/>
-                <a href='https://github.com/joelalbornoz' target='_blank'>Github</a></Typography>
+                {typoContent.thirdLine} <br/> {typoContent.fourthLine} <br/>
+                <a style={{color:'#FFF'}} rel="noopener noreferrer" href='https://linkedin.com/in/joel-albornoz/' target='_blank'>Linkedin</a> <br/>
+                <a style={{color:'#FFF'}} rel="noopener noreferrer" href='https://github.com/joelalbornoz' target='_blank'>Github</a></Typography>
                 <div style={styles.iconsContainer}>
                     <CardMedia component='img' src={js} style={styles.icons} />
                     <CardMedia component='img' src={Bootstrap} style={styles.icons} />
@@ -35,16 +48,17 @@ const LandingCard = () => {
                     <CardMedia component='img' src={css3} style={styles.icons} />
                     <CardMedia component='img' src={database} style={styles.icons} />
                 </div>
-
             </div>
         </Card>
+        </ZomDiv>
     )
 }
 
 const typoContent = {
     firstLine: "Elias Joel Albornoz",
     secondLine: "Frontend Developer - Computer Science Student",
-    thirdLine: "placeholder"
+    thirdLine: "23 years",
+    fourthLine:"Cordoba-Argentina"
 }
 
 const styles = {
@@ -56,7 +70,7 @@ const styles = {
         display: 'flex',
         alignContent: 'center',
         justifyContent: 'center',
-        flexFlow: 'row wrap'
+        flexWrap: 'wrap',
 
     },
     text: {
