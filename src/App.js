@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Toolbar from './components/Toolbar'
 import LandingCard from './components/LandingCard'
 import AcademicCard from './components/AcademicCard';
-
+import ProjectCard from './components/ProjectsCard'
 
 
 
@@ -14,8 +14,10 @@ function App() {
     const currCard = props.currCard;
     if(currCard==="Landing"){
       return <LandingCard/>
-    }else{
+    }else if(currCard === 'Academic'){
       return <AcademicCard/>
+    }else if(currCard === 'Projects'){
+      return <ProjectCard/>
     }
   }
   console.log(currentCard)

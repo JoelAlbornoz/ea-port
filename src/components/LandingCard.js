@@ -37,7 +37,10 @@ const LandingCard = () => {
                 <Typography style={styles.text}>{typoContent.firstLine} <br /> {typoContent.secondLine}<br/>
                 {typoContent.thirdLine} <br/> {typoContent.fourthLine} <br/>
                 <a style={{color:'#FFF'}} rel="noopener noreferrer" href='https://linkedin.com/in/joel-albornoz/' target='_blank'>Linkedin</a> <br/>
-                <a style={{color:'#FFF'}} rel="noopener noreferrer" href='https://github.com/joelalbornoz' target='_blank'>Github</a></Typography>
+                <a style={{color:'#FFF'}} rel="noopener noreferrer" href='https://github.com/joelalbornoz' target='_blank'>Github</a> <br/>
+                <a style={{color:'#FFF'}} rel="noopener noreferrer" href='https://codepen.io/EliasJA' target='_blank'>Codepen Profile</a> <br/>
+                <a style={{color:'#FFF'}} rel="noopener noreferrer" href='https://www.freecodecamp.org/eliasja' target='_blank'>Freecodecamp.org Portfolio</a>
+                </Typography>
                 <div style={styles.iconsContainer}>
                     <CardMedia component='img' src={js} style={styles.icons} />
                     <CardMedia component='img' src={Bootstrap} style={styles.icons} />
@@ -56,7 +59,7 @@ const LandingCard = () => {
 
 const typoContent = {
     firstLine: "Elias Joel Albornoz",
-    secondLine: "Frontend Developer - Computer Science Student",
+    secondLine:"Frontend Developer - Computer Science Student",
     thirdLine: "23 years",
     fourthLine:"Cordoba-Argentina"
 }

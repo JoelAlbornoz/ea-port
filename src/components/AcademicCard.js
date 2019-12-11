@@ -1,5 +1,4 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
 import fadein from 'react-animations/lib/fade-in'
@@ -28,22 +27,22 @@ const AcademicCard = () => {
             <Grid item xs={12}md={4}>
                 <div style={styles.courseList}>
                 <Grid container spacing={2} direction='column' alignItems="flex-start" justify="flex-start" >
-                    <Grid item>
+                    <Grid item xs={12} md={12}>
                         <CourseContainer title={data.algor.title} description={data.algor.description} link={data.algor.link}/>
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={12} md={12}>
                         <CourseContainer title={data.responsive.title} description={data.responsive.description} link={data.responsive.link}/>
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={12} md={12}>
                         <CourseContainer title={data.frontend.title} description={data.frontend.description}/>
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={12} md={12}>
                         <CourseContainer title={data.fullstack.title} description={data.fullstack.description}/>
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={12} md={12}>
                         <CourseContainer title={data.java.title} description={data.java.description} link={data.java.link}/>
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={12} md={12}>
                         <CourseContainer title={data.famaf.title} description={data.famaf.description}/>
                     </Grid>
                 </Grid>
@@ -63,6 +62,7 @@ const styles = {
         margin: '1vw',
         display: 'flex',
         flexWrap: 'wrap',
+        overflowY:'scroll'
     },
     img: {
         position:'sticky',
@@ -77,7 +77,6 @@ const styles = {
     courseList:{
         overflowY: 'scroll',
         overflowX: 'hidden',
-        width:'42vw',
         maxHeight:'80vh'
     },
 }

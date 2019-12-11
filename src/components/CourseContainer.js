@@ -1,7 +1,7 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card'
-import Grid from '@material-ui/core/Grid'
+
 
 const CourseContainer = (props) => {
     const Conditional = () => {
@@ -33,7 +33,7 @@ const CourseContainer = (props) => {
 const styles = {
     text:{
         color:'white',
-        paddingLeft:20,
+        paddingLeft:15,
         paddingBottom:0,
         paddingTop:0,
     },

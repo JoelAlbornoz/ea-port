@@ -10,9 +10,8 @@ const ToolbarM = (props) => {
           
           
           <Button style={styles.button}onClick={() => props.handleClick("Landing")}>Home</Button>
-          <Button style={styles.button}>Projects Overview</Button>
-          <Button style={styles.button}onClick={() => props.handleClick("Academic")}>Academic / Certifications</Button>
-          <Button style={styles.button}>Contact</Button>
+          <Button style={styles.button}onClick={() => props.handleClick("Projects")}>Projects</Button>
+          <Button style={styles.button}onClick={() => props.handleClick("Academic")}>Academic</Button>
           
         </Toolbar>
       </AppBar>
