@@ -22,8 +22,8 @@ const CondMedia = (props) => {
 
 const ProjectContainer = (props) => {
     return (
-        <Card style={styles.card}>
-            <Grid container direction='row' alignItems="flex-start" justify="flex-start" spacing={2}>
+        <Card style={{...styles.card, ...props.style}}>
+            <Grid container direction='row' alignItems="center" justify="center" spacing={2}>
                 <Grid item xs={2} md={4}>
                     <CondMedia lang={props.lang} />
                 </Grid>
@@ -53,17 +53,20 @@ const ProjectContainer = (props) => {
         
 const styles = {
                 card:{
-                backgroundColor: '#2c2f33'
+                backgroundColor: '#2c2f33',
+                width:'40vw',
+                height:'auto'
         },
     icon:{
             justifySelf:'center',
             alignSelf:'center',
-            maxWidth:'50%',
+            maxHeight:'15vh',
+            maxWidth:'5vw',
             padding:30,
         },
     text:{
-                color:'white',
-            paddingLeft:15,
+            color:'white',
+            padding:15,
             paddingBottom:0,
             paddingTop:0,
         },

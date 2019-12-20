@@ -19,46 +19,42 @@ const ProjectsCard = () => {
         <ZomDiv>
             <Card style={styles.Card}>
                 <Grid container spacing={8} direction='row' alignItems="center" justify="center" >
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12}md={5}>
                         <CardMedia style={styles.img} src={aimage} component='img' />
                     </Grid>
 
-                    <Grid item xs={12} md={6}>
-                        <div style={styles.projcont}>
-                            <Grid container spacing={2} direction='column' alignItems="flex-start" justify="flex-start" >
-                                <Grid item>
-                                    <ProjectContainer title={data.csj.title} description={data.csj.description} link={data.csj.link} lang={data.csj.lang} />
+                    
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.csj.title} description={data.csj.description} link={data.csj.link} lang={data.csj.lang} style={styles.proj} />
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.p5.title} description={data.p5.description} link={data.p5.link} lang={data.p5.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.p5.title} description={data.p5.description} link={data.p5.link} lang={data.p5.lang} style={styles.proj}/>
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.ani.title} description={data.ani.description} link={data.ani.link} lang={data.ani.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.ani.title} description={data.ani.description} link={data.ani.link} lang={data.ani.lang} style={styles.proj} />
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.rna.title} description={data.rna.description} link={data.rna.link} lang={data.rna.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.rna.title} description={data.rna.description} link={data.rna.link} lang={data.rna.lang} style={styles.proj} />
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.rqm.title} description={data.rqm.description} link={data.rqm.link} lang={data.rqm.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.rqm.title} description={data.rqm.description} link={data.rqm.link} lang={data.rqm.lang} style={styles.proj}/>
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.tech.title} description={data.tech.description} link={data.tech.link} lang={data.tech.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.tech.title} description={data.tech.description} link={data.tech.link} lang={data.tech.lang} style={styles.proj} />
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.opn.title} description={data.opn.description} link={data.opn.link} lang={data.opn.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.opn.title} description={data.opn.description} link={data.opn.link} lang={data.opn.lang} style={styles.proj} />
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.rnd.title} description={data.rnd.description} link={data.rnd.link} lang={data.rnd.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.rnd.title} description={data.rnd.description} link={data.rnd.link} lang={data.rnd.lang} style={styles.proj} />
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.opt.title} description={data.opt.description} link={data.opt.link} lang={data.opt.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.opt.title} description={data.opt.description} link={data.opt.link} lang={data.opt.lang} style={styles.proj}/>
                                 </Grid>
-                                <Grid item>
-                                    <ProjectContainer title={data.tpt.title} description={data.tpt.description} link={data.tpt.link} lang={data.tpt.lang} />
+                                <Grid item xs={12} md={8}>
+                                    <ProjectContainer title={data.tpt.title} description={data.tpt.description} link={data.tpt.link} lang={data.tpt.lang} style={styles.proj} />
                                 </Grid>
-                            </Grid>
-                        </div>
-                    </Grid>
+                           
 
                 </Grid>
             </Card>
@@ -74,22 +70,24 @@ const styles = {
         margin: '1vw',
         display: 'flex',
         flexWrap: 'wrap',
-        overflowY: 'scroll'
+        overflowY:'scroll',
     },
     img: {
-        position: 'sticky',
+        marginLeft:'auto',
+        marginRight:'auto',
         overflow: 'hidden',
         height: 'auto',
         boxShadow: "1vw 1vw 1vw rgba(0,0,0,0.35) ",
         border: 'none',
-        flex: 'auto',
-        alignSelf: 'center',
-        justifySelf: 'center'
+        maxWidth:'25vw'
     },
-    projcont: {
-        overflowY: 'scroll',
+    proj: {
+        overflowY: 'hidden',
         overflowX: 'hidden',
-        maxHeight: '80vh'
+        width: '100%',
+        height:'auto',
+        marginLeft:'auto',
+        marginRight:'auto'
     }
 
 }
