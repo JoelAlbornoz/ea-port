@@ -18,36 +18,32 @@ const AcademicCard = () => {
         <ZomDiv>
         <Card style={styles.Card}>
         <Grid container spacing={8} direction='row' alignItems="center" justify="center" >
-            <Grid item xs={12}md={4}>
-
+            <Grid item xs={12}md={5} style={styles.imgContainer}>
+            
                 <CardMedia style={styles.img}
                     src={ganim} component='img' />
         
             </Grid >
-            <Grid item xs={12}md={4}>
-                <div style={styles.courseList}>
-                <Grid container spacing={2} direction='column' alignItems="flex-start" justify="flex-start" >
-                    <Grid item xs={12} md={12}>
-                        <CourseContainer title={data.algor.title} description={data.algor.description} link={data.algor.link}/>
+            
+                    <Grid item xs={12} md={5}>
+                        <CourseContainer title={data.algor.title} description={data.algor.description} link={data.algor.link} styles={styles.courseContainer}/>
                     </Grid>
-                    <Grid item xs={12} md={12}>
-                        <CourseContainer title={data.responsive.title} description={data.responsive.description} link={data.responsive.link}/>
+                    <Grid item xs={12} md={5}>
+                        <CourseContainer title={data.responsive.title} description={data.responsive.description} link={data.responsive.link} styles={styles.courseContainer}/>
                     </Grid>
-                    <Grid item xs={12} md={12}>
-                        <CourseContainer title={data.frontend.title} description={data.frontend.description}/>
+                    <Grid item xs={12} md={5}>
+                        <CourseContainer title={data.frontend.title} description={data.frontend.description} styles={styles.courseContainer}/>
                     </Grid>
-                    <Grid item xs={12} md={12}>
-                        <CourseContainer title={data.fullstack.title} description={data.fullstack.description}/>
+                    <Grid item xs={12} md={5}>
+                        <CourseContainer title={data.fullstack.title} description={data.fullstack.description} styles={styles.courseContainer}/>
                     </Grid>
-                    <Grid item xs={12} md={12}>
-                        <CourseContainer title={data.java.title} description={data.java.description} link={data.java.link}/>
+                    <Grid item xs={12} md={5}>
+                        <CourseContainer title={data.java.title} description={data.java.description} link={data.java.link} styles={styles.courseContainer}/>
                     </Grid>
-                    <Grid item xs={12} md={12}>
-                        <CourseContainer title={data.famaf.title} description={data.famaf.description}/>
+                    <Grid item xs={12} md={5}>
+                        <CourseContainer title={data.famaf.title} description={data.famaf.description} styles={styles.courseContainer}/>
                     </Grid>
-                </Grid>
-                </div>
-            </Grid>
+            
         </Grid>
         </Card>
         </ZomDiv>
@@ -62,22 +58,27 @@ const styles = {
         margin: '1vw',
         display: 'flex',
         flexWrap: 'wrap',
-        overflowY:'scroll'
-    },
+        overflowY:'scroll',
+        
+    },imgContainer:{justifyItems:'center'},
     img: {
-        position:'sticky',
+        marginLeft:'auto',
+        marginRight:'auto',
         overflow: 'hidden',
         height: 'auto',
         boxShadow: "1vw 1vw 1vw rgba(0,0,0,0.35) ",
         border: 'none',
-        flex: 'auto',
         alignSelf:'center',
-        justifySelf:'center'
+        justifySelf:'center',
+        maxWidth:'25vw'
     },
     courseList:{
         overflowY: 'scroll',
         overflowX: 'hidden',
         maxHeight:'80vh'
     },
+    courseContainer:{
+        height:'40vh',
+    }
 }
 export default AcademicCard;

@@ -36,7 +36,7 @@ const ProjectsCard = () => {
                                     <ProjectContainer title={data.ani.title} description={data.ani.description} link={data.ani.link} lang={data.ani.lang} />
                                 </Grid>
                                 <Grid item>
-                                    <ProjectContainer title={data.rna.title} description={data.csj.description} link={data.rna.link} lang={data.rna.lang} />
+                                    <ProjectContainer title={data.rna.title} description={data.rna.description} link={data.rna.link} lang={data.rna.lang} />
                                 </Grid>
                                 <Grid item>
                                     <ProjectContainer title={data.rqm.title} description={data.rqm.description} link={data.rqm.link} lang={data.rqm.lang} />

@@ -6,7 +6,7 @@ import Card from '@material-ui/core/Card'
 const CourseContainer = (props) => {
     const Conditional = () => {
         if(props.link){
-            return (<a href={props.link} style={styles.text}>Certificate</a>)
+            return (<a href={props.link} target='_blank' rel="noopener noreferrer" style={styles.text}>Certificate</a>)
         }
         else{
             return null
@@ -15,7 +15,7 @@ const CourseContainer = (props) => {
 
 
     return (
-        <Card style={styles.card}>
+        <Card style={{...styles.card, ...props.styles}}>
         
             <Typography style={{ color: 'white' }}>
             

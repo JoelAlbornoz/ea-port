@@ -2,7 +2,7 @@ import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
-import Foto from '../media/images/foto.jpg'
+import Foto from '../media/images/img.png'
 import js from '../media/svg/js-square-brands.svg'
 import Bootstrap from '../media/svg/Bootstrap.svg'
 import html5 from '../media/svg/html5.svg'
@@ -13,7 +13,7 @@ import material from '../media/svg/material.svg'
 import react from '../media/svg/react.svg'
 import fadein from 'react-animations/lib/fade-in'
 import styled, { keyframes } from 'styled-components'
-
+import Grid from '@material-ui/core/Grid'
 
 let anim;
 let ZomDiv;
@@ -28,11 +28,13 @@ const LandingCard = () => {
     return (
         <ZomDiv>
         <Card style={styles.Card}>
-            <div style={styles.imgContainer}>
+        <Grid container direction="row" justify="center" alignItems="center">
+                <Grid item xs={7} md={3}>
                 <CardMedia style={styles.img}
                     imageStyle={{ borderRadius: 200 }}
                     src={Foto} component='img' />
-            </div>
+                </Grid>
+            <Grid item xs={7} md={3}>
             <div style={styles.text}>
                 <Typography style={styles.text}>{typoContent.firstLine} <br /> {typoContent.secondLine}<br/>
                 {typoContent.thirdLine} <br/> {typoContent.fourthLine} <br/>
@@ -52,6 +54,8 @@ const LandingCard = () => {
                     <CardMedia component='img' src={database} style={styles.icons} />
                 </div>
             </div>
+            </Grid>
+            </Grid>
         </Card>
         </ZomDiv>
     )
@@ -71,32 +75,19 @@ const styles = {
         backgroundColor: '#23272a',
         margin: '1vw',
         display: 'flex',
-        alignContent: 'center',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-
     },
     text: {
         padding: '2vw',
-        width: '50vw',
-        justifySelf: 'start',
-        alignText: 'center',
+        width: '45vw',
         color: 'white',
-        flex: 1,
     },
     img: {
         borderRadius: '50px',
         overflow: 'hidden',
         maxWidth: '17vw',
         height: 'auto',
-        alignSelf: 'center',
         boxShadow: "2vw 2vw 2vw rgba(0,0,0,0.35) ",
-        border: 'none',
-    },
-    imgContainer: {
-        marginRight: 'auto',
-        justifySelf: 'start',
-        padding: '3vw',
+        
     },
     icons: {
         width: 20, height: 20, padding: 2,
